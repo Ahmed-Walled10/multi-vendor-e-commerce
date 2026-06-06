@@ -83,12 +83,15 @@ var app = builder.Build();
 
 app.UseHttpLogging();
 
-// Configure the HTTP request pipeline.
+/*// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+}*/
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // app.UseHttpsRedirection(); // Removed to prevent dropping Authorization header on HTTP -> HTTPS redirects
 
